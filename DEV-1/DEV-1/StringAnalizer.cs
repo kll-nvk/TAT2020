@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DEV_1
 {
-    class StringAnalizer
+    public class StringAnalizer
     {
         public int NumberOfRepeatingSymbols(string word)
         {
@@ -37,12 +37,9 @@ namespace DEV_1
 
                 if (count > max)
                 {
-                    return count;
+                    max = count;
                 }
-                else
-                {
                     return max;
-                }
             }
             else
             {
@@ -75,12 +72,10 @@ namespace DEV_1
 
                 if (count > max)
                 {
-                    return count;
+                    max = count;
                 }
-                else
-                {
-                    return max;
-                }
+
+                return max;
             }
             else
             {

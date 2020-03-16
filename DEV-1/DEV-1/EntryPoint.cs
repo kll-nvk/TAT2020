@@ -13,7 +13,7 @@ namespace DEV_1
 
             StringAnalizer stringAnalizer = new StringAnalizer();
             Console.WriteLine(stringAnalizer.NumberOfRepeatingSymbols(null));
-            Console.WriteLine(stringAnalizer.NumberOfNonRepeatingSymbols(Console.ReadLine()));
+            Console.WriteLine(stringAnalizer.NumberOfNonRepeatingSymbols("abccefgh"));
 
         }
     }
