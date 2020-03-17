@@ -9,7 +9,7 @@ namespace DEV_1._2
             try
             {
                 NumberConverter numberConverter = new NumberConverter();
-                Console.WriteLine(numberConverter.ConvertNumber(2600, 21));
+                Console.WriteLine(numberConverter.ConvertNumber(0, 20));
             }
 
             catch(Exception error)
