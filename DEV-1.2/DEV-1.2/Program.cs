@@ -6,9 +6,16 @@ namespace DEV_1._2
     {
         static void Main(string[] args)
         {
+            try
+            {
+                NumberConverter numberConverter = new NumberConverter();
+                Console.WriteLine(numberConverter.ConvertNumber(2600, 21));
+            }
 
-            NumberConverter numberConverter = new NumberConverter();
-            Console.WriteLine(numberConverter.ConvertNumber(260,3));
+            catch(Exception error)
+            {
+                Console.WriteLine(error.Message);
+            }
 
         }
     }
