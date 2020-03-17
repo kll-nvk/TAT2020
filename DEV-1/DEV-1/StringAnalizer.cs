@@ -1,22 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DEV_1
 {
+    /// <summary>
+    /// Class for string analize
+    /// </summary>
     public class StringAnalizer
     {
-        public int NumberOfRepeatingSymbols(string word)
+        /// <summary>
+        /// Method which count repeating symbols sequence
+        /// </summary>
+        /// <param name="word">String which analized</param>
+        /// <returns>number of repeatin' symbols sequence</returns>
+        public int CountOfRepeatingSymbolsSequence(string word)
         {
             int max = 0;
             int count = 0;
 
             if (!String.IsNullOrEmpty(word))
             {
+                word = word.ToLower();
                 char buffer = word[0];
-
 
                 foreach (char c in word)
                 {
@@ -35,11 +39,12 @@ namespace DEV_1
                     }
                 }
 
-                if (count > max)
+                if (count > max)    
                 {
                     max = count;
                 }
-                    return max;
+
+                 return max;
             }
             else
             {
@@ -47,13 +52,19 @@ namespace DEV_1
             }
         }
 
-        public int NumberOfNonRepeatingSymbols(string word)
+        /// <summary>
+        /// Method which count non repeating symbols sequence
+        /// </summary>
+        /// <param name="word">String which analized</param>
+        /// <returns>number of non repeating symbols sequence</returns>
+        public int CountOfNonRepeatingSymbolsSequence(string word)
         {
             int max = 0;
             int count = 0;
 
             if (!String.IsNullOrEmpty(word))
             {
+                word = word.ToLower();
                 char buffer = word[0];
 
                 foreach (char c in word)
@@ -61,13 +72,16 @@ namespace DEV_1
                     if (buffer != c)
                     {
                         count++;
-                        buffer = c;
                     }
                     else
                     {
+                        if (max < count)
+                        {
+                            max = count;
+                        }
                         count = 1;
-                        buffer = c;
                     }
+                    buffer = c;
                 }
 
                 if (count > max)

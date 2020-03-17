@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DEV_1
 {
@@ -12,8 +8,8 @@ namespace DEV_1
         {
 
             StringAnalizer stringAnalizer = new StringAnalizer();
-            Console.WriteLine(stringAnalizer.NumberOfRepeatingSymbols(null));
-            Console.WriteLine(stringAnalizer.NumberOfNonRepeatingSymbols("abccefgh"));
+            Console.WriteLine(stringAnalizer.CountOfRepeatingSymbolsSequence("qwe"));
+            Console.WriteLine(stringAnalizer.CountOfNonRepeatingSymbolsSequence("qweaaaqwe"));
 
         }
     }
