@@ -5,8 +5,11 @@ using DEV_1._2;
 namespace DEV_1._2Tests
 {
     [TestClass]
-    public class NumberConverterTests
+    public class UnitTest1
     {
+        /// <summary>
+        /// Test which check convertation to 16 base system
+        /// </summary>
         [TestMethod]
         public void ConvertNumber_To16BaseSystemTest()
         {
@@ -16,9 +19,11 @@ namespace DEV_1._2Tests
             string expected = "A28";
 
             Assert.AreEqual(actual, expected);
-
         }
 
+        /// <summary>
+        /// Test which check convertation to 2 base system
+        /// </summary>
         [TestMethod]
 
         public void ConvertNumber_To2BaseSystemTest()
@@ -28,10 +33,12 @@ namespace DEV_1._2Tests
             string actual = numberConverter.ConvertNumber(2600, 2);
             string expected = "101000101000";
 
-            Assert.AreEqual(actual, expected);
-
+            Assert.AreEqual(expected, actual);
         }
 
+        /// <summary>
+        /// Test which check convertation to 20 base system
+        /// </summary>
         [TestMethod]
 
         public void ConvertNumber_To20BaseSystemTest()
@@ -41,10 +48,13 @@ namespace DEV_1._2Tests
             string actual = numberConverter.ConvertNumber(2600, 20);
             string expected = "6A0";
 
-            Assert.AreEqual(actual, expected);
+            Assert.AreEqual(expected, actual);
 
         }
 
+        /// <summary>
+        /// Test which check zero's convertation to some base
+        /// </summary>
         [TestMethod]
         [DataRow(0u,2u)]
         [DataRow(0u,16u)]
@@ -58,9 +68,11 @@ namespace DEV_1._2Tests
             string expected = "0";
        
             Assert.AreEqual(expected, actual);
-
         }
 
+        /// <summary>
+        /// Test which check convertation in unexpected base
+        /// </summary>
         [TestMethod]
         [DataRow(69u,21u)]
         [DataRow(69u,1u)]
@@ -69,7 +81,6 @@ namespace DEV_1._2Tests
         {
             NumberConverter numberConverter = new NumberConverter();
             Assert.ThrowsException<ArgumentException>(delegate { numberConverter.ConvertNumber(number, numberSystem); });
-
         }
 
 
