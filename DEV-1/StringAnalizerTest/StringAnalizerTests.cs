@@ -5,9 +5,11 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace StringAnalizerTest
 {
     [TestClass]
-    public class UnitTest1
+    public class StringAnalizerTests
     {
-
+        /// <summary>
+        /// Test which check repeating symbols sequence 
+        /// </summary>
         [TestMethod]
         [DataRow("AaAqwe",3)]
         [DataRow("aaaqwe",3)]
@@ -33,6 +35,9 @@ namespace StringAnalizerTest
             
         }
 
+        /// <summary>
+        /// Test which check non repeating symbols sequence 
+        /// </summary>
         [TestMethod]
         [DataRow("AaAqwe", 4)]
         [DataRow("aaaqwe", 4)]
