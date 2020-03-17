@@ -5,7 +5,7 @@ using DEV_1._2;
 namespace DEV_1._2Tests
 {
     [TestClass]
-    public class UnitTest1
+    public class NumberConverterTests
     {
         [TestMethod]
         public void ConvertNumber_To16BaseSystemTest()
