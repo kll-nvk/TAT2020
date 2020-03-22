@@ -1,12 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DEV_1._3
 {
-    class Track
+    class Track : Vehicle
     {
+        private ushort _maxLoadWeight;
+
+        public Track(ushort maxLoadWeight, Engine engine, Chassis chassis, Transmission transmission, string model)
+           : base(engine, chassis, transmission, model)
+        {
+            _maxLoadWeight=maxLoadWeight;
+        }
+
+        public new string GetInfo()
+        {
+            return $"Track\nMax load weight:{_maxLoadWeight}\n{base.GetInfo()}";
+        }
+
     }
 }
