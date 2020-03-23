@@ -12,6 +12,9 @@ namespace DEV_1._3
             _maxSpeed=maxSpeed;
         }
 
+        /// <summary>
+        /// Method that displays information on the console
+        /// </summary>
         public new string GetInfo()
         {
             return $"Scooter\nMax Speed:{_maxSpeed}\n{base.GetInfo()}";

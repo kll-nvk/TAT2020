@@ -12,6 +12,9 @@ namespace DEV_1._3
             _maxLoadWeight=maxLoadWeight;
         }
 
+        /// <summary>
+        /// Method that displays information on the console
+        /// </summary>
         public new string GetInfo()
         {
             return $"Track\nMax load weight:{_maxLoadWeight}\n{base.GetInfo()}";

@@ -12,6 +12,10 @@ namespace DEV_1._3
             _seatsNumber = seatsNumber;
         }
 
+
+        /// <summary>
+        /// Method that displays information on the console
+        /// </summary>
         public new string GetInfo()
         {
             return $"Bus\nSeats Number:{_seatsNumber}\n{base.GetInfo()}";
