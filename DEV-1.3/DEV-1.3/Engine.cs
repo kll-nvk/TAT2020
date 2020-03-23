@@ -19,7 +19,7 @@ namespace DEV_1._3
         public uint Power { get; private set; }
 
         /// <summary>
-        /// Constructor that initialized class elements
+        /// Constructor that initialized Engine class elements 
         /// </summary>
         public Engine(uint power, double capacity, string type, string serialNumber)
         {
@@ -86,7 +86,7 @@ namespace DEV_1._3
             {
                 if(String.IsNullOrEmpty(value))
                 {
-                    throw new ArgumentException("Please write correct a normal string");
+                    throw new ArgumentException("Please write a normal string");
                 }
                 CheckLatinSymbols(value);
                 _serialNumber = value;

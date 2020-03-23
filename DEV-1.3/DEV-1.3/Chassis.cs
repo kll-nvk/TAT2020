@@ -45,7 +45,7 @@ namespace DEV_1._3
             {
                 if(String.IsNullOrEmpty(value))
                 {
-                    throw new ArgumentException("");
+                    throw new ArgumentException("Please write correct a normal string");
                 }
                 _serialNumber = value;
             }
