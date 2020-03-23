@@ -9,6 +9,10 @@ namespace DEV_1._3
         private Transmission _transmission;
         private string _model;
 
+        /// <summary>
+        /// Constructor that initialized Vehicle class elements
+        /// </summary>
+        /// <param name="engine"></param>
         public Vehicle(Engine engine,Chassis chassis, Transmission transmission, string model)
         {
             _engine = engine;
@@ -18,6 +22,9 @@ namespace DEV_1._3
 
         }
 
+        /// <summary>
+        /// Method that accept and return Model values
+        /// </summary>
         public string Model
         {
             get
@@ -29,13 +36,17 @@ namespace DEV_1._3
             {
                 if (String.IsNullOrEmpty(value))
                 {
-                    throw new ArgumentException("");
+                    throw new ArgumentException("Please write a normal string dont null or zero");
                 }
-
+                CheckLatinSymbols(value);
+                _model = value;
             }
 
         }
 
+        /// <summary>
+        /// method accepts and returns Engine values
+        /// </summary>
         public Engine Engine
         {
             get
@@ -49,6 +60,9 @@ namespace DEV_1._3
             }
         }
 
+        /// <summary>
+        /// method Chassis accepts and returns Chassis values
+        /// </summary>
         public Chassis Chassis
         {
             get
@@ -62,6 +76,9 @@ namespace DEV_1._3
             }
         }
 
+        /// <summary>
+        /// method Transmission accepts and returns Transmission values
+        /// </summary>
         public Transmission Transmission
         {
             get
@@ -75,6 +92,24 @@ namespace DEV_1._3
             }
         }
 
+
+        /// <summary>
+        /// A method that throws an error if the characters are not Latin alphavit
+        /// </summary>
+        public void CheckLatinSymbols(string value)
+        {
+            for (int i = 0; i < value.Length; i++)
+            {
+                if (!(Char.IsDigit(value[i]) || value[i] >= 'A' && value[i] <= 'Z'))
+                {
+                    throw new Exception("Please write a symbol which Corresponds to Latin Alfovit");
+                }
+            }
+        }
+
+        /// <summary>
+        /// Method that displays information on the console
+        /// </summary>
         public string GetInfo()
         {
             return $"Model:{Model}\n\n{Transmission.GetInfo()}\n{Chassis.GetInfo()}\n{Engine.GetInfo()}";

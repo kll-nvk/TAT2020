@@ -86,7 +86,7 @@ namespace DEV_1._3
             {
                 if(String.IsNullOrEmpty(value))
                 {
-                    throw new ArgumentException("Please write a normal string");
+                    throw new ArgumentException("Please write a normal string dont null or zero");
                 }
                 CheckLatinSymbols(value);
                 _serialNumber = value;
