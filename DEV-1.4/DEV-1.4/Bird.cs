@@ -34,7 +34,7 @@ namespace DEV_1._4
             if (_speed == 0)
             {
                 throw new Exception("Bird can't reach this location, because speed equal zero")
-            }
+            };
 
             return Coordinates.GetDistance(newCoordinates) / _speed;
         }

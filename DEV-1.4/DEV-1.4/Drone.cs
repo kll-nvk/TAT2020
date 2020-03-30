@@ -2,7 +2,7 @@
 
 namespace DEV_1._4
 {
-    class Drone:IFlyable
+    class Drone : IFlyable
     {
         private const uint MIN_SPEED = 3;
         private const uint MAX_SPEED = 120;
@@ -12,9 +12,9 @@ namespace DEV_1._4
 
         private byte _speed;
 
-        public Drone(Point coordinate, byte speed )
+        public Drone(Point coordinate, byte speed)
         {
-            Speed=speed;
+            Speed = speed;
         }
         public Point Coordinates { get; set; }
 
@@ -69,4 +69,5 @@ namespace DEV_1._4
 
 
         }
+    }
 }
