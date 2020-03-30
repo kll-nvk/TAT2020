@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace DEV_1._4
 {
-    class EntryPoint
+    class Plane
     {
-        static void Main(string[] args)
-        {
-        }
     }
 }
